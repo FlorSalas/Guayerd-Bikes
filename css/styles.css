@@ -1,3 +1,157 @@
-.fondo-logo{
-	background-color:  #212C65;
+:root {
+    --fuenteHeadings: 'Poppins', sans-serif;
+    --fuenteParrafos: 'Roboto', sans-serif;
+    --colorPrimario: #212C65;
+    --colorSegundario: #01A1DD;
+    --colorTexto: #000000;
+    --colorAccent: #01A1DD;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/**globales**/
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuenteHeadings);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/**************************************/
+
+
+/*LOGO*/
+
+h1 a {
+    font-size: 40px;
+    padding: 10px;
+    color: #212C65;
+    text-decoration: none;
+    margin-left: 50px;
+    position: absolute;
+}
+
+span {
+    color: #01A1DD;
+}
+
+
+/*NAVEGACION*/
+
+header {
+    width: 100%;
+}
+
+header nav {
+    width: 100%;
+    margin: 1px auto;
+}
+
+.btn-menu {
+    display: none;
+}
+
+header nav ul {
+    overflow: hidden;
+    list-style: none;
+}
+
+header nav ul li {
+    float: right;
+}
+
+header nav ul li a {
+    color: #000;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+header nav ul li span {
+    margin-right: 10px;
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid #000;
+}
+
+section {
+    padding: 20px;
+}
+
+@media screen and (max-width:800px) {
+    header nav {
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        margin: 0;
+        position: fixed;
+    }
+    header nav ul li {
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+    }
+    .btn-menu {
+        display: block;
+        width: 100%;
+    }
+    .btn-menu {
+        display: block;
+        padding: 20px;
+        color: #000;
+        ;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .btn-menu span {
+        float: right;
+        font-size: 40px;
+    }
 }
