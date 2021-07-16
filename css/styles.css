@@ -21,7 +21,10 @@ html {
 body {
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
-    line-height: 2;
+    
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
 }
 
 
@@ -69,7 +72,7 @@ h1 a {
     padding: 10px;
     color: #212C65;
     text-decoration: none;
-    margin: auto 50px;
+    
     position: absolute;
 }
 
@@ -84,11 +87,12 @@ header {
     width: 100%;
 	position: fixed;
 	background: #01A1DD;	
+    z-index: 300;
 }
 
 header nav {
     width: 100%;
-    margin: 1px auto;
+    
 }
 
 .btn-menu {
@@ -110,7 +114,7 @@ header nav ul li a {
     padding: 10px;
     display: block;
     text-decoration: none;
-	margin: auto 20px;
+	
 }
 
 header nav ul li span {
@@ -122,37 +126,90 @@ header nav ul li a:hover {
 	transition: 0.5s;
 }
 
-.conten-banner img{
-box-sizing: inherit;
-width: 100%;
-position: absolute;
-top: 100px;
-}
+
 
 .wave{
+    
     position: absolute;
-	bottom: 30px;
-	width: 100%;
+    width: 1349px;
+    margin-top: 400px;
 }
 
 
 /* CONTENIDO */
+.conten-banner img{
+    box-sizing: inherit;
+    position: -ms-page;
+    width: 1500px;
+    margin-top: 89px;
+    }
 .contenedor{
-	
-	width: 90%;
-	position: absolute;
-	top: 530px;
+    position: static;
+    top: 600px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
 }
-.contenedor p {
-	justify-content: center;
+.tg  {
+    top: 2050px;
+    margin: auto  ;
+    width: 110rem;
+    border-collapse:collapse;
+    border-color:#9ABAD9;
+    border-spacing:0;
+}
+.tg td{
+    background-color:#EBF5FF;
+    border-color:#9ABAD9;
+    border-style:solid;
+    border-width:1px;
+    color:#444;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    overflow:hidden;
+    padding: 8px 20px;
+    word-break:normal;
+}
+.tg th{
+    background-color:#409cff;
+    border-color:#9ABAD9;
+    border-style:solid;
+    border-width:1px;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    overflow:hidden;
+    padding: 8px 20px;
+    word-break:normal;
+}
+.tg .tg-3fb6{
+    border-color:#01a1dd;
+    font-size:24px;
+    text-align:center;
+    vertical-align:top
+}
+.tg .tg-lglc{
+    background-color:#212c65;
+    border-color:#212c65;
+    font-size:32px;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:middle
+}
+.tg .tg-dl5s{
+    background-color:#212c65;
+    border-color:#212c65;
+    font-size:32px;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:top
 }
 
-
-
-
-@media screen and (max-width:800px) {
+ 
+@media screen and (max-width:800px) { /*TABLES*/
 	h1 a {
-		font-size: 31px;
+		font-size: 24px;
 		padding: 0;
 		color: #212C65;
 		text-decoration: none;
@@ -165,13 +222,14 @@ top: 100px;
 	}
 	header{
 		position: absolute;
+        
 		
 	}
     header nav {
-		z-index: 100;
+		z-index: 300;
 		position: absolute;
         width: 100%;
-        height: 100vh;
+        height: 415vh;
 		top: 82px;
         margin: auto;
         background: #01A1DD;
@@ -194,6 +252,7 @@ top: 100px;
         
     }
     .btn-menu {
+        z-index: 200;
         display: block;
 		position: relative;
         padding: 20px;
@@ -214,13 +273,118 @@ top: 100px;
     }
 	.conten-banner{
 	width: 100%;
-	top: 10px;
-	position: absolute;
+	top: 1px;
+	position: relative;
 	}
-	.banner{
-		position: relative;
+	.wave{
+       display: none;
+    }
+	.contenedor{
+        position: static;
+        top: 600px;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .tg  {
+        top: 2050px;
+        margin: auto  ;
+        width: 400px;
+        border-collapse:collapse;
+        border-color:#9ABAD9;
+        border-spacing:0;
+    }
+    .tg td{
+        background-color:#EBF5FF;
+        border-color:#9ABAD9;
+        border-style:solid;
+        border-width:1px;
+        color:#444;
+        font-family:Arial, sans-serif;
+        font-size:14px;
+        overflow:hidden;
+        padding: 8px 20px;
+        word-break:normal;
+    }
+    .tg th{
+        background-color:#409cff;
+        border-color:#9ABAD9;
+        border-style:solid;
+        border-width:1px;
+        color:#fff;
+        font-family:Arial, sans-serif;
+        font-size:14px;
+        font-weight:normal;
+        overflow:hidden;
+        padding: 8px 20px;
+        word-break:normal;
+    }
+    .tg .tg-3fb6{
+        border-color:#01a1dd;
+        font-size:24px;
+        text-align:center;
+        vertical-align:top
+    }
+    .tg .tg-lglc{
+        background-color:#212c65;
+        border-color:#212c65;
+        font-size:32px;
+        font-weight:bold;
+        text-align:center;
+        vertical-align:middle
+    }
+    .tg .tg-dl5s{
+        background-color:#212c65;
+        border-color:#212c65;
+        font-size:32px;
+        font-weight:bold;
+        text-align:center;
+        vertical-align:top
+    }
+	
+}
 
-	}
+@media screen and (max-width:320px) { /*IPHONE 5/SE*/
 	
+.tg  {
+    top: 2050px;
+    margin: auto  ;
+    width: 320px;
+    border-collapse:collapse;
+    border-color:#9ABAD9;
+    border-spacing:0;
+}
+}
+@media screen and (max-width:360px) {  /*GALAXY S5*/
+
+.tg  {
+    top: 2050px;
+    margin: auto  ;
+    width: 320px;
+    border-collapse:collapse;
+    border-color:#9ABAD9;
+    border-spacing:0;
+}
+}
+@media screen and (max-width:375px) {  /*MOVIL*/
 	
+.tg  {
+    top: 2050px;
+    margin: auto  ;
+    width: 375px;
+    border-collapse:collapse;
+    border-color:#9ABAD9;
+    border-spacing:0;
+}
+}
+@media screen and (max-width:400px) {  /*MOVIL*/
+	
+.tg  {
+    top: 2050px;
+    margin: auto  ;
+    width: 375px;
+    border-collapse:collapse;
+    border-color:#9ABAD9;
+    border-spacing:0;
+}
 }
