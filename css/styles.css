@@ -322,6 +322,7 @@ header nav ul li a:hover {
 
 .formulario fieldset {
     border: none;
+    box-shadow: 0px 10px 10px -6px black;
 }
 
 .formulario legend {
@@ -396,7 +397,7 @@ header nav ul li a:hover {
 
 .ubicacion__contenedor {
     border: solid #96a7aa;
-    border-width: .5rem;
+    border-width: .2rem;
     border-radius: 1rem;
 }
 
