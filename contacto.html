@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Contacto | Guayerd Bikes - Bicicletas de Competición y Urbanas.</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link href="/img/title-icon.png" rel="icon" type="image/png">
-    
+    <link href="img/title-icon.png" rel="icon" type="image/png">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
@@ -15,29 +14,77 @@
 </head>
 
 <body>
-    <!-- Header -->
-
     <header>
-        <!-- Logo -->
-        <div class="logo">
-            <h1><a href="index.html">Guayerd <span class="logo2">Bikes</span></a></h1>
-        </div>
+       
 
-        <!-- Nav -->
-        <div class="btn-menu">
-            <i class="fas fa-bars"></i>
-        </div>
+        <div class="navegacion">
+                 <!-- Boton -->
+            <div class="btn-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+                <!-- Logo -->
+                <div class="logo">
+                    <h1 class="conten-logo"><a href="index.html">Guayerd <span class="logo2">Bikes</span></a></h1>
+                </div>
+                
+                <!-- Nav -->
+                <nav class="menu-nav">
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </nav>
+            
+        </div> 
+        </header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    
+    <div class="bg">
+        <section class="container">
+            <h3 class="titulo__contacto">Contacto</h3>
+            <form class="formulario" action="#">
+                <fieldset>
+                    <legend>Contactanos llenando todos los campos</legend>
+                    <div class="contenedor_campos">
+                        <div class="campo">
+                            <label class="campo__label" for="nombre">Nombre:</label>
+                            <input class="campo__field" type="text" placeholder="Nombre" id="nombre">
+                        </div>
+                        <div class="campo">
+                            <label class="campo__label" for="email">Email:</label>
+                            <input class="campo__field" type="email" placeholder="Email" id="email">
+                        </div>
+                        <div class="campo">
+                            <label class="campo__label" for="tema">Tema:</label>
+                            <select name="tema" class="campo__field">
+                                <option disabled selected >--Seleccione--</option>
+                                <option value="venta">Venta</option>
+                                <option value="trabajo">Trabajo</option>
+                                <option value="Reparacion">Reparacion</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label class="campo__label" for="mensaje">Mensaje:</label>
+                            <textarea class="campo__tabla" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escriba su mensaje"></textarea>
+                        </div>
+                        <div class="enviar">
+                            <input type="submit" value="Enviar" class="boton">
+                        </div>
+                        <!--fin contenedor de los campos-->
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section class="container ubicacion">
+            <h4 class="ubicacion__titulo">Ubicación</h4>
+            <div>
+                <iframe class="ubicacion__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.5123024414174!2d-58.45005978505273!3d-34.591204864342544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f12e398ecd%3A0x98abf435fbfab70!2sAv.%20Corrientes%206237%2C%20C1427BPA%20CABA!5e0!3m2!1ses-419!2sar!4v1626295219588!5m2!1ses-419!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <p class="ubicacion__direccion">Av. Corrientes 6237</p>
+        </section>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.dropotron.min.js"></script>
