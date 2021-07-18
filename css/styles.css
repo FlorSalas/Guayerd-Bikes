@@ -623,3 +623,11 @@ header nav ul li a:hover {
         border-spacing: 0;
     }
 }
+
+.snt{
+    width: 100%;
+}
+.org{
+    padding-left: 30%;
+    padding-top: 100px;
+}
