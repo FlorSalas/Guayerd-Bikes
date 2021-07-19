@@ -41,5 +41,7 @@ function momentoDelDia() {
             alert("Buenas noches, " + localStorage.getItem('name'));
         }
     }
-  }
-momentoDelDia();
+}
+if (localStorage.getItem('name')) {
+    momentoDelDia();
+}
