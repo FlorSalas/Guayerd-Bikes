@@ -24,7 +24,6 @@ body {
     display: flex;
     min-height: 100vh;
     flex-wrap: wrap;
-    background-image: url();
 }
 
 /**globales**/
@@ -270,6 +269,18 @@ header nav ul li a:hover {
     box-sizing: border-box;
 }
 
+.infox{
+    border: 1px solid #01a1dd; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #01a1dd; /*color botón*/
+    border-radius: 50px; /*bordes redondos*/
+    width: 30%;
+    margin-left: 65%;
+    margin-top: 15%;
+    text-align: center;
+    text-decoration-color: blanchedalmond;
+    }
+
 @media screen and (max-width: 800px) {
     .imagen {
         width: auto;
@@ -293,7 +304,6 @@ header nav ul li a:hover {
         display: block;
     }
 }
-
 
 /*CONTACTO*/
 
@@ -627,8 +637,30 @@ header nav ul li a:hover {
 
 .snt{
     width: 100%;
+    height: fit-content;
 }
 .org{
     padding-left: 30%;
     padding-top: 100px;
+}
+
+@media screen and (max-width: 800px){
+    .snt{
+        width: auto;
+        height: 900px;    
+    }
+    .org{
+        width: 90%;
+        padding-left: 170px;
+        padding-top: 100px;
+        margin-top: 50px;
+    }
+    .footer {
+        width: 100%;
+    }
+    .footer__text {
+        text-align: left;
+        margin-left: 12rem;
+    }
+    
 }
