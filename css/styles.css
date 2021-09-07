@@ -26,6 +26,7 @@ body {
     flex-wrap: wrap;
 }
 
+
 /**globales**/
 
 a {
@@ -230,80 +231,24 @@ header nav ul li a:hover {
 
 /**PRODUCTOS**/
 
-.relleno {
-    height: 100px;
+.lista_productos {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+.productos {
+    border: 1px solid #000000;
     width: 100%;
+    height: 35rem;
 }
 
-.imagen {
-    width: 40%;
-    margin: auto 10px;
-    box-sizing: border-box;
-    border-radius: 12%;
-    padding: 50px;
+.text-none {
+    text-decoration: line-through;
 }
 
-.product {
-    text-align: left;
-    padding-left: 50px;
-    margin-bottom: 20px;
-}
-
-.description {
-    width: 43%;
-    text-align: justify;
-    box-sizing: border-box;
-    border-radius: 12%;
-    padding: 50px;
-    padding-top: 110px;
-}
-
-.boxes {
-    border: 1px solid #01a1dd;
-    border-radius: 30px;
-    box-shadow: #000000;
-    width: 80%;
-    margin: 30px auto;
-    justify-content: center;
-    display: flex;
-    box-sizing: border-box;
-}
-
-.infox{
-    border: 1px solid #01a1dd; /*anchura, estilo y color borde*/
-    padding: 10px; /*espacio alrededor texto*/
-    background-color: #01a1dd; /*color botón*/
-    border-radius: 50px; /*bordes redondos*/
-    width: 30%;
-    margin-left: 65%;
-    margin-top: 15%;
-    text-align: center;
-    text-decoration-color: blanchedalmond;
-    }
-
-@media screen and (max-width: 800px) {
-    .imagen {
-        width: auto;
-        margin: 0px;
-        text-align: center;
-    }
-    .description {
-        width: auto;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 0px;
-        margin-top: 10px;
-    }
-    .rest {
-        text-align: center;
-    }
-    h3 {
-        text-align: center;
-    }
-    .boxes {
-        display: block;
-    }
-}
 
 /*CONTACTO*/
 
@@ -444,7 +389,7 @@ header nav ul li a:hover {
 
 .footer__text {
     color: #fff;
-    text-align: center; 
+    text-align: center;
     font-size: 1.5rem;
 }
 
@@ -482,7 +427,6 @@ header nav ul li a:hover {
         top: 82px;
         margin: auto;
         background: #01A1DD;
-        
     }
     header nav ul li {
         background: #01A1DD;
@@ -636,21 +580,22 @@ header nav ul li a:hover {
     }
 }
 
-.snt{
+.snt {
     width: 100%;
     height: fit-content;
 }
-.org{
+
+.org {
     padding-left: 30%;
     padding-top: 100px;
 }
 
-@media screen and (max-width: 800px){
-    .snt{
+@media screen and (max-width: 800px) {
+    .snt {
         width: auto;
-        height: 900px;    
+        height: 900px;
     }
-    .org{
+    .org {
         width: 90%;
         padding-left: 170px;
         padding-top: 100px;
@@ -663,5 +608,4 @@ header nav ul li a:hover {
         text-align: left;
         margin-left: 12rem;
     }
-    
 }
