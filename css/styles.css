@@ -248,6 +248,10 @@ header nav ul li a:hover {
 .text-none {
     text-decoration: line-through;
 }
+.imgProducto{
+    height: 200px;
+    width: 100%;
+}
 
 
 /*CONTACTO*/
