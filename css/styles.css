@@ -228,6 +228,28 @@ header nav ul li a:hover {
     vertical-align: top
 }
 
+.leer-mas-texto {
+    color: #000000;
+    display: none;
+}
+
+.leer-mas-texto--show {
+    display: inline;
+}
+
+.leer-mas-btn {
+    color: #fff;
+    background-color: #01A1DD;
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
 
 /**PRODUCTOS**/
 
