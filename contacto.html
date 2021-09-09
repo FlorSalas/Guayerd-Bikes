@@ -33,11 +33,14 @@
     <!-- ICON RESPONSIVE -->
     <script src="https://kit.fontawesome.com/b1abebee4b.js" crossorigin="anonymous"></script>
     <script>
-        (function(h,e,a,t,m,p) {
-        m=e.createElement(a);m.async=!0;m.src=t;
-        p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
-        })(window,document,'script','https://u.heatmap.it/log.js');
-        </script>
+        (function(h, e, a, t, m, p) {
+            m = e.createElement(a);
+            m.async = !0;
+            m.src = t;
+            p = e.getElementsByTagName(a)[0];
+            p.parentNode.insertBefore(m, p);
+        })(window, document, 'script', 'https://u.heatmap.it/log.js');
+    </script>
 </head>
 
 <body>
@@ -84,7 +87,7 @@
                         </div>
                         <div class="campo">
                             <label class="campo__label" for="tema">Tema:</label>
-                            <select name="tema" class="campo__field">
+                            <select name="tema" class="campo__field" id="opcion">
                                 <option disabled selected>--Seleccione--</option>
                                 <option value="venta">Venta</option>
                                 <option value="trabajo">Trabajo</option>
@@ -96,8 +99,22 @@
                             <label class="campo__label" for="mensaje">Mensaje:</label>
                             <textarea class="campo__tabla" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escriba su mensaje"></textarea>
                         </div>
+                        <div class="sk-circle">
+                            <div class="sk-circle1 sk-child"></div>
+                            <div class="sk-circle2 sk-child"></div>
+                            <div class="sk-circle3 sk-child"></div>
+                            <div class="sk-circle4 sk-child"></div>
+                            <div class="sk-circle5 sk-child"></div>
+                            <div class="sk-circle6 sk-child"></div>
+                            <div class="sk-circle7 sk-child"></div>
+                            <div class="sk-circle8 sk-child"></div>
+                            <div class="sk-circle9 sk-child"></div>
+                            <div class="sk-circle10 sk-child"></div>
+                            <div class="sk-circle11 sk-child"></div>
+                            <div class="sk-circle12 sk-child"></div>
+                        </div>
                         <div class="enviar">
-                            <input onclick="mostrar()" type="submit" value="Enviar" class="boton">
+                            <input type="submit" value="Enviar" class="boton">
                         </div>
                         <!--fin contenedor de los campos-->
                     </div>
@@ -124,6 +141,7 @@
         <script src="js/util.js"></script>
         <script src="js/main.js"></script>
         <script src="js/codigoDescuento.js"></script>
+        <script src="js/validacionFormulario.js"></script>
 </body>
 </body>
 
