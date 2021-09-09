@@ -181,6 +181,17 @@ header nav ul li a:hover {
     width: 80%;
     margin: 0 auto;
     text-align: justify;
+    margin-top: 2.5rem;
+}
+
+.texto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.texto-contenedor h1 {
+    margin-bottom: 2px;
 }
 
 .tg {
@@ -244,21 +255,64 @@ header nav ul li a:hover {
     vertical-align: top
 }
 
+.leer-mas-texto {
+    color: #000000;
+    display: none;
+}
+
+.leer-mas-texto--show {
+    display: inline;
+}
+
+.leer-mas-btn {
+    color: #fff;
+    background-color: #01A1DD;
+    border-radius: 12px;
+    padding: 12px 30px;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.leer-mas-btn:hover {
+    background-color: hsla(196, 99%, 44%, 0.856);
+    color: #fff;
+}
+
 
 /**PRODUCTOS**/
 
 .lista_productos {
-    margin-top: 8rem;
+    margin-top: 15rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    column-gap: 2rem;
+    justify-items: center;
 }
 
 .productos {
-    border: 1px solid #000000;
-    width: 100%;
-    height: 35rem;
+    background: #ffffff;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.07);
+    border-radius: 1px;
+    width: 70%;
+    height: 47rem;
+    margin-bottom: 50px;
+    transition: transform .2s;
+    position: relative;
+}
+
+.productos:hover {
+    box-shadow: 0px 0px 10px #007EA7;
+    cursor: pointer;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    transform: scale(1.1);
 }
 
 .text-none {
@@ -268,6 +322,61 @@ header nav ul li a:hover {
 .imgProducto {
     height: 200px;
     width: 100%;
+    border-radius: 5px;
+    transition: transform .2s;
+}
+
+.imgProducto:hover {
+    transform: scale(1.1);
+}
+
+.infoProducto {
+    margin: 0;
+}
+
+.titulo {
+    font-family: var( --fuenteHeadings);
+    position: relative;
+    left: 10px;
+    font-weight: 600
+}
+
+.precio {
+    position: relative;
+    bottom: 74px;
+    right: 10px;
+    float: right;
+    font-size: 18px;
+    font-weight: 400
+}
+
+.descuento {
+    position: relative;
+    float: right;
+    left: 40px;
+    font-size: 18px;
+    bottom: 45px;
+    color: #48cfad;
+    font-weight: 800
+}
+
+.stock {
+    font-family: var( --fuenteHeadings);
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+    margin: 0;
+    font-weight: 600
+}
+
+.descripcion {
+    font-size: 14px;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    line-height: 18px;
+    position: absolute;
+    padding: 1rem;
 }
 
 
@@ -671,8 +780,7 @@ header nav ul li a:hover {
         position: static;
         top: 600px;
         width: 90%;
-        margin: 0 auto;
-        text-align: center;
+        text-align: justify;
     }
     .tg {
         top: 2050px;

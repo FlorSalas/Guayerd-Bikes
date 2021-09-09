@@ -78,10 +78,26 @@ document.addEventListener('DOMContentLoaded', () => {
         spinner.style.display = "flex";
         setTimeout(() => {
             spinner.style.display = "none";
+            resetearFromulario();
         }, 3000);
 
     }
 
+
+    //resetear formulario
+    function resetearFromulario() {
+        //reseta el formulario
+        formulario.reset();
+        nombre.classList.remove('correcto');
+        email.classList.remove('correcto');
+        opcion.classList.remove('correcto');
+        mensaje.classList.remove('correcto');
+
+        //boton enviar
+        //boton enviar
+        btnEnviar.disabled = true;
+        btnEnviar.classList.add('btn-enviar');
+    }
 
 
 });

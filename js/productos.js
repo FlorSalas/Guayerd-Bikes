@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const stock = document.querySelectorAll('.stock');
     const precio = document.querySelectorAll('.precio');
     const descuento = document.querySelectorAll('.descuento');
+    const descripcion = document.querySelectorAll('.descripcion');
+
 
     fetch("https://demo2420474.mockable.io/productList")
         .then(respuesta => respuesta.json())
@@ -18,10 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
             img[i].setAttribute('src', `${productos.imgUrl}`);
             img[i].setAttribute('alt', `${productos.title}`)
             titulo[i].textContent = `${productos.title}`;
-            stock[i].textContent = `stock: ${productos.inStock}`;
-            precio[i].textContent = `Precio: $${productos.price}`;
+            stock[i].textContent = `Stock: ${productos.inStock}`;
+            precio[i].textContent = `$${productos.price}`;
+            descripcion[i].textContent = `${productos.description}`;
+
             if (productos.discountPrice !== undefined) {
-                descuento[i].textContent = `Descuento: $${productos.discountPrice}`
+                descuento[i].textContent = `$${productos.discountPrice}`
                 precio[i].classList.add('text-none')
             }
             i++;
