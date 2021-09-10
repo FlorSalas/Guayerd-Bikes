@@ -14,21 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function mostraProductos(productoss) {
-        let i = 0;
+    
         console.log(productoss);
-        productoss.forEach(productos => {
-            img[i].setAttribute('src', `${productos.imgUrl}`);
-            img[i].setAttribute('alt', `${productos.title}`)
-            titulo[i].textContent = `${productos.title}`;
-            stock[i].textContent = `Stock: ${productos.inStock}`;
-            precio[i].textContent = `$${productos.price}`;
-            descripcion[i].textContent = `${productos.description}`;
+        productoss.forEach((listaProducto, i) => {
+            img[i].setAttribute('src', `${listaProducto.imgUrl}`);
+            img[i].setAttribute('alt', `${listaProducto.title}`)
+            titulo[i].textContent = `${listaProducto.title}`;
+            stock[i].textContent = `Stock: ${listaProducto.inStock}`;
+            precio[i].textContent = `$${listaProducto.price}`;
+            descripcion[i].textContent = `${listaProducto.description}`;
 
-            if (productos.discountPrice !== undefined) {
-                descuento[i].textContent = `$${productos.discountPrice}`
+            if (listaProducto.discountPrice !== undefined) {
+                descuento[i].textContent = `$${listaProducto.discountPrice}`
                 precio[i].classList.add('text-none')
             }
-            i++;
         });
     }
 
