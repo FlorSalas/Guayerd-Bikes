@@ -60,6 +60,19 @@ img {
     max-width: 100%;
 }
 
+.overlay-productos {
+    position: fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.8);
+    z-index: 50;
+}
 
 /*utilidades*/
 
@@ -423,6 +436,102 @@ header nav ul li a:hover {
     padding: 1rem;
 }
 
+.popup-productos {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 300;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.contentBox {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contentBox .imgBx {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBox .imgBx::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: var(--colorSegundario);
+    border-radius: 50%;
+}
+
+.contentBox .imgBx img {
+    position: relative;
+    max-width: 230px;
+    z-index: 1;
+}
+
+.contentBox .content {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBox .content h3 {
+    color: #333;
+    line-height: 1em;
+    font-weight: 300;
+    font-size: 2em;
+}
+
+.contentBox .content h2 {
+    font-size: 4em;
+    color: var(--colorSegundario);
+    line-height: 1em;
+}
+
+.contentBox .content span {
+    color: #333;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.contentBox .content p {
+    font-weight: 300;
+    margin-right: 30px;
+    margin-bottom: 40px;
+}
+
+.contentBox .content .codigoDesc {
+    font-size: 0.95em;
+    font-weight: 1000;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #f3f3f3 url(/img/close.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
 
 /*CONTACTO*/
 
