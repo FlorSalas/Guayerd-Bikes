@@ -45,7 +45,7 @@
 
 <body>
     <header>
-
+        <div id='overlay-productos' class='overlay-productos' style="display:none;"></div>
 
         <div class="navegacion">
             <!-- Boton -->
@@ -70,6 +70,22 @@
         </div>
     </header>
     
+    <div class="popup-productos">
+        <div class="contentBox">
+            <div class="close"></div>
+            <div class="imgBx">
+                <img src="/img/gift-card.png" alt="">
+            </div>
+            <div class="content">
+                <div>
+                    <h3>OFERTA ESPECIAL</h3>
+                    <h2 class="descuento-popup"></h2>
+                    <p>Ingresa el cupón <span class="codigoDesc"></span> y obtene un descuento en tu compra.</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+
     <div class="contenedor lista_productos">
         <div class="productos">
             <img class="imgProducto" src="" alt="">
@@ -150,6 +166,9 @@
     <script src="js/main.js"></script>
     <!--<script src="js/novedades.js"></script>-->
     <script src="js/productos.js"></script>
+    <script src="js/popupProductos.js"></script>
+    <script src="js/cookiesPagina.js"></script>
+
 </body>
 
 </html>
