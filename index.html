@@ -87,9 +87,14 @@
                 style="stroke: none; fill: rgb(255, 255, 255);"></path>
                 </svg>
     </div> -->
-
+   
     <div class="contenedor">
         <div class="texto-contenedor">
+            <div class="popup-confirm"> 
+                <p class="title-confirm">¿Deseas suscribirte?</p>
+                <button id="btn-abrir-popup" class="btn-abrir-popup">Si</button>
+                <button id="btn-no_abrir-popup" class="btn-no_abrir-popup">No</button>
+            </div>
             <div class="historia-guayerd">
             <h1>GUAYERD BIKES</h1>
                 <p>
@@ -237,11 +242,34 @@
             </tr>
         </tbody>
     </table>
+    
+
+   
+
+    
+    <div class="overlay" id="overlay">
+        <div class="popup-email" id="popup-email">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <img class="email" src="img/email.svg" alt="">
+            <h3>¿Deseas recibir novedades por email?</h3>
+            <form action="">
+                <div class="contenedor-inputs">
+                    <input type="text" placeholder="Nombre">
+                    <input type="email" placeholder="Correo">
+                </div>
+                <input type="submit" class="btn-submit" value="Suscribirse">
+            </form>
+        </div>
+    </div>
+</div>
+
+
 
     <footer class="footer">
         <p class="footer__text">Guayerd Bikes - Bicicletas de Competición y Urbanas. &copy; 2021 </p>
     </footer>
 
+    <script src="js/popupemail.js"></script>
     <script src="js/banner.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.dropotron.min.js"></script>

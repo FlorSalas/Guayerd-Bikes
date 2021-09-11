@@ -322,7 +322,7 @@ header nav ul li a:hover {
 }
 .productos {
     background: #ffffff;
-    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.07);
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 3px 8px;
     border-radius: 1px;
     width: 70%;
     height: 47rem;
@@ -332,7 +332,7 @@ header nav ul li a:hover {
 }
 .productos2 {
     background: #ffffff;
-    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.07);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 1px;
     width: 90%;
     height: 47rem;
@@ -357,22 +357,6 @@ header nav ul li a:hover {
     position: relative;
     left: 830px;
     bottom: 50px;
-}
-.productos:hover {
-    box-shadow: 0px 0px 10px #007EA7;
-    cursor: pointer;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    transform: scale(1.1);
-}
-.productos2:hover {
-    box-shadow: 0px 0px 10px #007EA7;
-    cursor: pointer;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    transform: scale(1.1);
 }
 
 .text-none {
@@ -744,7 +728,195 @@ header nav ul li a:hover {
     }
 }
 
+/*POPUP EMAIL*/
+.popup-confirm{
+    width: 200px;
+    position: fixed;
+    left: 1130px;
+    bottom: 5px;
+    z-index: 40;
+    font-size: 20px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 3px 8px;
 
+}
+.popup-confirm-off{
+    display: none;
+}
+.title-confirm{
+    font-family: var( --fuenteHeadings) ;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 4px;
+}
+.btn-abrir-popup {
+	padding: 0 20px;
+	margin: 10px 10px;
+	height: 40px;
+    width: 80px;
+	border: none;
+	color: #fff;
+	background:  #01A1DD;
+	border-radius: 3px;
+	font-family: var( --fuenteHeadings) ;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+	cursor: pointer;
+}
+.btn-no_abrir-popup{
+    padding: 0 20px;
+
+    width: 80px;
+	height: 40px;
+	border: none;
+	color: #fff;
+	background: #01A1DD;
+	border-radius: 3px;
+	font-family: var( --fuenteHeadings) ;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+	cursor: pointer;
+}
+.btn-abrir-popup:hover{
+    background-color: #212C65;
+}
+.btn-no_abrir-popup:hover{
+    background-color: #212C65;
+}
+.overlay {
+	background: rgba(0,0,0,.8);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+    z-index: 2;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup-email {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+	width: 600px;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.popup-email .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.popup-email .btn-cerrar-popup:hover {
+	color: #000;
+}
+
+.popup-email h3 {
+	font-size: 36px;
+	opacity: 0;
+    margin: 18px 0;
+}
+
+
+
+.popup-email form .contenedor-inputs {
+	opacity: 0;
+}
+
+.popup-email form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 2px solid #fff;
+    border-radius: 8px;
+}
+.popup-email form .contenedor-inputs input:focus{
+    border: 2px solid #212C65;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(231, 231, 231, 0.1);
+}
+.popup-email form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #01A1DD;
+	border-radius: 3px;
+	font-family: var( --fuenteHeadings) ;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.popup-email form .btn-submit:hover {
+	background-color: #212C65;
+}
+.email{
+    width: 80px;
+    position: relative;
+    left: 10px;
+
+}
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup-email.active {	transform: scale(1); opacity: 1; }
+.popup-email.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup-email.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup-email.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
+
+}
 /***FOOTER*****/
 
 .footer {
