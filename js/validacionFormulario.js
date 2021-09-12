@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.querySelector('#email');
     const opcion = document.querySelector('#opcion');
     const mensaje = document.querySelector('#mensaje');
+    const telefono = document.querySelector('#telefono');
 
     //variables Expresiones regulares
     const erNombre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const erNumero = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
     //boton enviar
     btnEnviar.disabled = true;
     btnEnviar.classList.add('btn-enviar');
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //campos formulario
     nombre.addEventListener('blur', validarFormulario);
+    telefono.addEventListener('blur', validarFormulario);
     email.addEventListener('blur', validarFormulario);
     opcion.addEventListener('blur', validarFormulario);
     mensaje.addEventListener('blur', validarFormulario);
@@ -64,8 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.target.classList.add('error');
             }
         }
+        if (e.target.type === 'number') {
+            if (erNumero.test(e.target.value)) {
+                e.target.classList.remove('error');
+                e.target.classList.add('correcto');
+            } else {
+                e.target.classList.remove('correcto');
+                e.target.classList.add('error');
+            }
+        }
         //cuando todos los campos sean valido
-        if (erNombre.test(email.value) && nombre.value.length > 0 && mensaje.value.length > 0 && opcion.value !== "--Seleccione--") {
+        if (erNombre.test(email.value) && erNumero.test(telefono.value) && nombre.value.length > 0 && mensaje.value.length > 0 && opcion.value !== "--Seleccione--") {
             btnEnviar.disabled = false;
             btnEnviar.classList.remove('btn-enviar');
         }
@@ -80,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             spinner.style.display = "none";
             resetearFromulario();
         }, 3000);
+        enviarDatos();
 
     }
 
@@ -92,12 +105,28 @@ document.addEventListener('DOMContentLoaded', () => {
         email.classList.remove('correcto');
         opcion.classList.remove('correcto');
         mensaje.classList.remove('correcto');
+        telefono.classList.remove('correcto');
 
-        //boton enviar
+
         //boton enviar
         btnEnviar.disabled = true;
         btnEnviar.classList.add('btn-enviar');
     }
 
+    //enviar datos del formaulario
+    function enviarDatos() {
+
+        fetch('https://demo2420474.mockable.io/submitForm', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: `${nombre.value}`,
+                email: `${email.value}`,
+                phone: `${telefono.value}`,
+                subject: `${opcion.value}`,
+                message: `${mensaje.value}`
+            })
+        })
+
+    }
 
 });
