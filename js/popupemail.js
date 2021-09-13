@@ -28,6 +28,12 @@ popupNo.addEventListener('click', function() {
 
 });
 
+//CERRAR VENTANA
+btnCerrarPopup.addEventListener('click', function(e){
+	e.preventDefault();
+	overlay.classList.remove('active');
+	popup.classList.remove('active');
+}); 
 
 //Obtener valores de los imputs
 name_form.addEventListener('blur', guardar);
