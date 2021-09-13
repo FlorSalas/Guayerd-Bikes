@@ -415,7 +415,7 @@ header nav ul li a:hover {
 .precio {
     position: relative;
     bottom: 74px;
-    right: 10px;
+    right: 60px;
     float: right;
     font-size: 18px;
     font-weight: 400
@@ -424,11 +424,30 @@ header nav ul li a:hover {
 .descuento {
     position: relative;
     float: right;
-    left: 40px;
+    left: 25px;
     font-size: 18px;
     bottom: 45px;
     color: #48cfad;
     font-weight: 800
+}
+
+.moneda {
+    position: relative;
+    bottom: 74px;
+    left: 40px;
+    float: right;
+    font-size: 18px;
+    font-weight: 400
+}
+
+.moneda-descuento {
+    position: relative;
+    bottom: 45px;
+    left: 125px;
+    float: right;
+    color: #48cfad;
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .stock {
@@ -545,6 +564,13 @@ header nav ul li a:hover {
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
+}
+
+.productos-title {
+    margin-top: 140px;
+    margin-left: 304px;
+    margin-bottom: -100px;
+    text-align: left;
 }
 
 /*CONTACTO*/
