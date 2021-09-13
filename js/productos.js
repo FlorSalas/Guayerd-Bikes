@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const precio = document.querySelectorAll('.precio');
     const descuento = document.querySelectorAll('.descuento');
     const descripcion = document.querySelectorAll('.descripcion');
+    const moneda = document.querySelectorAll('.moneda')
+    const monedaDescuento = document.querySelectorAll('.moneda-descuento')
 
 
     fetch("https://demo2420474.mockable.io/productList")
@@ -23,9 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
             stock[i].textContent = `Stock: ${listaProducto.inStock}`;
             precio[i].textContent = `$${listaProducto.price}`;
             descripcion[i].textContent = `${listaProducto.description}`;
+            moneda[i].textContent = `${listaProducto.currency}`
 
             if (listaProducto.discountPrice !== undefined) {
                 descuento[i].textContent = `$${listaProducto.discountPrice}`
+                monedaDescuento[i].textContent = `${listaProducto.currency}`
                 precio[i].classList.add('text-none')
             }
         });
