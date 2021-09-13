@@ -62,17 +62,16 @@ img {
 
 .overlay-productos {
     position: fixed;
-    padding:0;
-    margin:0;
-
-    top:0;
-    left:0;
-
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background:rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 50;
 }
+
 
 /*utilidades*/
 
@@ -202,16 +201,19 @@ header nav ul li a:hover {
     flex-wrap: wrap;
     margin-bottom: 3rem;
 }
-.historia-guayerd{
+
+.historia-guayerd {
     width: 65%;
 }
-.bici4{
+
+.bici4 {
     position: absolute;
     left: 870px;
     top: 500px;
     z-index: 1;
 }
-.circle{
+
+.circle {
     width: 200px;
     height: 200px;
     background-color: #01A1DD;
@@ -219,7 +221,6 @@ header nav ul li a:hover {
     position: relative;
     top: 80px;
     left: 10px;
-
 }
 
 .texto-contenedor h1 {
@@ -326,13 +327,15 @@ header nav ul li a:hover {
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;
 }
-/* .lista_productos2 {
+
+.lista_productos2 {
     margin-top: 15rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     width: 100%;
-} */
+}
+
 .productos {
     background: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -348,11 +351,10 @@ header nav ul li a:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
     transform: scale(1.05);
-    border-radius: 10px;  
+    border-radius: 10px;
 }
 
-
-/* .productos2 {
+.productos2 {
     background: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 1px;
@@ -361,9 +363,9 @@ header nav ul li a:hover {
     margin-bottom: 90px;
     transition: transform .2s;
     position: relative;
-} */
+}
 
-.btn-ver_productos{
+.btn-ver_productos {
     color: #fff;
     background-color: #01A1DD;
     border-radius: 12px;
@@ -373,12 +375,12 @@ header nav ul li a:hover {
     cursor: pointer;
 }
 
-.btn-ver_productos:hover{
+.btn-ver_productos:hover {
     background-color: hsla(196, 99%, 44%, 0.856);
     color: #fff;
 }
 
-.ver_productos{
+.ver_productos {
     position: relative;
     left: 830px;
     bottom: 50px;
@@ -573,6 +575,7 @@ header nav ul li a:hover {
     text-align: left;
 }
 
+
 /*CONTACTO*/
 
 .bg {
@@ -658,6 +661,7 @@ header nav ul li a:hover {
 
 .campo__tabla {
     border: none;
+    width: 100%;
 }
 
 
@@ -877,8 +881,10 @@ header nav ul li a:hover {
     }
 }
 
+
 /*POPUP EMAIL*/
-.popup-confirm{
+
+.popup-confirm {
     width: 200px;
     position: fixed;
     left: 1130px;
@@ -887,185 +893,211 @@ header nav ul li a:hover {
     font-size: 20px;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.30) 0px 3px 8px;
-
 }
-.popup-confirm-off{
+
+.popup-confirm-off {
     display: none;
 }
-.title-confirm{
-    font-family: var( --fuenteHeadings) ;
+
+.title-confirm {
+    font-family: var( --fuenteHeadings);
     font-size: 18px;
     font-weight: 600;
     margin: 10px 4px;
 }
-.btn-abrir-popup {
-	padding: 0 20px;
-	margin: 10px 10px;
-	height: 40px;
-    width: 80px;
-	border: none;
-	color: #fff;
-	background:  #01A1DD;
-	border-radius: 3px;
-	font-family: var( --fuenteHeadings) ;
-	font-size: 16px;
-	cursor: pointer;
-	transition: .3s ease all;
-	cursor: pointer;
-}
-.btn-no_abrir-popup{
-    padding: 0 20px;
 
+.btn-abrir-popup {
+    padding: 0 20px;
+    margin: 10px 10px;
+    height: 40px;
     width: 80px;
-	height: 40px;
-	border: none;
-	color: #fff;
-	background: #01A1DD;
-	border-radius: 3px;
-	font-family: var( --fuenteHeadings) ;
-	font-size: 16px;
-	cursor: pointer;
-	transition: .3s ease all;
-	cursor: pointer;
+    border: none;
+    color: #fff;
+    background: #01A1DD;
+    border-radius: 3px;
+    font-family: var( --fuenteHeadings);
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+    cursor: pointer;
 }
-.btn-abrir-popup:hover{
+
+.btn-no_abrir-popup {
+    padding: 0 20px;
+    width: 80px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    background: #01A1DD;
+    border-radius: 3px;
+    font-family: var( --fuenteHeadings);
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.btn-abrir-popup:hover {
     background-color: #212C65;
 }
-.btn-no_abrir-popup:hover{
+
+.btn-no_abrir-popup:hover {
     background-color: #212C65;
 }
+
 .overlay {
-	background: rgba(0,0,0,.8);
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	align-items: center;
-	justify-content: center;
-	display: flex;
-	visibility: hidden;
+    background: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
     z-index: 2;
 }
 
 .overlay.active {
-	visibility: visible;
+    visibility: visible;
 }
 
 .popup-email {
-	background: #F8F8F8;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
-	padding: 20px;
-	text-align: center;
-	width: 600px;
-	transition: .3s ease all;
-	transform: scale(0.7);
-	opacity: 0;
+    background: #F8F8F8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
 }
 
 .popup-email .btn-cerrar-popup {
-	font-size: 16px;
-	line-height: 16px;
-	display: block;
-	text-align: right;
-	transition: .3s ease all;
-	color: #BBBBBB;
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    transition: .3s ease all;
+    color: #BBBBBB;
 }
 
 .popup-email .btn-cerrar-popup:hover {
-	color: #000;
+    color: #000;
 }
 
 .popup-email h3 {
-	font-size: 36px;
-	opacity: 0;
+    font-size: 36px;
+    opacity: 0;
     margin: 18px 0;
 }
 
-
-
 .popup-email form .contenedor-inputs {
-	opacity: 0;
+    opacity: 0;
 }
 
 .popup-email form .contenedor-inputs input {
-	width: 100%;
-	margin-bottom: 20px;
-	height: 52px;
-	font-size: 18px;
-	line-height: 52px;
-	text-align: center;
-	border: 2px solid #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 52px;
+    text-align: center;
+    border: 2px solid #fff;
     border-radius: 8px;
 }
-.popup-email form .contenedor-inputs input:focus{
+
+.popup-email form .contenedor-inputs input:focus {
     border: 2px solid #212C65;
     outline: none;
     box-shadow: 3px 0px 30px rgba(231, 231, 231, 0.1);
 }
+
 .popup-email form .btn-submit {
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #fff;
-	background: #01A1DD;
-	border-radius: 3px;
-	font-family: var( --fuenteHeadings) ;
-	font-size: 16px;
-	cursor: pointer;
-	transition: .3s ease all;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #01A1DD;
+    border-radius: 3px;
+    font-family: var( --fuenteHeadings);
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
 }
 
 .popup-email form .btn-submit:hover {
-	background-color: #212C65;
+    background-color: #212C65;
 }
-.email{
+
+.email {
     width: 80px;
     position: relative;
     left: 10px;
-
 }
 
+
 /* ------------------------- */
+
+
 /* ANIMACIONES */
+
+
 /* ------------------------- */
-.popup-email.active {	transform: scale(1); opacity: 1; }
-.popup-email.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
-.popup-email.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup-email.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+.popup-email.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup-email.active h3 {
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.popup-email.active h4 {
+    animation: entradaSubtitulo .8s ease .5s forwards;
+}
+
+.popup-email.active .contenedor-inputs {
+    animation: entradaInputs 1s linear 1s forwards;
+}
 
 @keyframes entradaTitulo {
-	from {
-		opacity: 0;
-		transform: translateY(-25px);
-	}
-
-	to {
-		transform: translateY(0);
-		opacity: 1;
-	}
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes entradaSubtitulo {
-	from {
-		opacity: 0;
-		transform: translateY(25px);
-	}
-
-	to {
-		transform: translateY(0);
-		opacity: 1;
-	}
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes entradaInputs {
-	from { opacity: 0; }
-	to { opacity: 1; }
-
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
+
+
 /***FOOTER*****/
 
 .footer {
@@ -1112,7 +1144,7 @@ header nav ul li a:hover {
         z-index: 300;
         position: absolute;
         width: 90%;
-        height: 100vh;
+        height: 10rem;
         top: 82px;
         margin: auto;
         background: #01A1DD;

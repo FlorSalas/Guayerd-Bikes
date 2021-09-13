@@ -11,6 +11,12 @@ const email_form = document.querySelector('#form_email');
 const name_form = document.querySelector('#form_name');
 const erEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+//comprobar si ya esta suscripto
+if (!(localStorage.getItem('valorNombre') === null && localStorage.getItem('valorEmail') === null)) {
+    popupOff.classList.add('popup-confirm-off');
+}
+
+
 //valor email
 let valorEmail;
 
